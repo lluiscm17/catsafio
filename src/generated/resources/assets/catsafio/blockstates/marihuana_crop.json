@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "catsafio:block/marihuana_stage_0"
+    },
+    "age=1": {
+      "model": "catsafio:block/marihuana_stage_1"
+    },
+    "age=2": {
+      "model": "catsafio:block/marihuana_stage_2"
+    },
+    "age=3": {
+      "model": "catsafio:block/marihuana_stage_3"
+    },
+    "age=4": {
+      "model": "catsafio:block/marihuana_stage_4"
+    },
+    "age=5": {
+      "model": "catsafio:block/marihuana_stage_5"
+    },
+    "age=6": {
+      "model": "catsafio:block/marihuana_stage_6"
+    },
+    "age=7": {
+      "model": "catsafio:block/marihuana_stage_7"
+    },
+    "age=8": {
+      "model": "catsafio:block/marihuana_stage_8"
+    }
+  }
+}

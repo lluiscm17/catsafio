@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "catsafio:raw_auralita_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "catsafio:raw_auralita"
+  }
+}

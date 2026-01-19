@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "catsafio:block/cooked_iron_block"
+    }
+  }
+}

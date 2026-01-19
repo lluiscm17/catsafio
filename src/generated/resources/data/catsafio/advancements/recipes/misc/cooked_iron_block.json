@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "catsafio:cooked_iron"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "catsafio:cooked_iron_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cooked_iron",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "catsafio:cooked_iron_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "catsafio:block/infernit_block"
+    }
+  }
+}

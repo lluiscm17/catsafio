@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1600,
+  "experience": 0.25,
+  "group": "iron_smeltables",
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "result": "catsafio:cooked_iron"
+}
