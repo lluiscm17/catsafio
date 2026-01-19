@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "catsafio:rayolita"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "item": "catsafio:rayolita_leggins"
+  },
+  "template": {
+    "item": "catsafio:rayolita_upgrade_smithing_template"
+  }
+}

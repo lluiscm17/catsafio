@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "catsafio:auralita"
+  },
+  "base": {
+    "item": "catsafio:infernit_boots"
+  },
+  "result": {
+    "item": "catsafio:auralita_boots"
+  },
+  "template": {
+    "item": "catsafio:auralita_upgrade_smithing_template"
+  }
+}

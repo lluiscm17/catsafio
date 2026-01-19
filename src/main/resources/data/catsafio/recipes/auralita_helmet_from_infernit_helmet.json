@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "catsafio:auralita"
+  },
+  "base": {
+    "item": "catsafio:casco_infernit"
+  },
+  "result": {
+    "item": "catsafio:auralita_helmet"
+  },
+  "template": {
+    "item": "catsafio:auralita_upgrade_smithing_template"
+  }
+}

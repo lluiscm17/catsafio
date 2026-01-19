@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SVS",
+    "SPS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:diamond_block"
+    },
+    "V": {
+      "item": "catsafio:auralita_upgrade_smithing_template"
+    },
+    "P": {
+      "item": "catsafio:cogollo"
+    }
+  },
+  "result": {
+    "item": "catsafio:auralita_upgrade_smithing_template",
+    "count": 2
+  }
+}

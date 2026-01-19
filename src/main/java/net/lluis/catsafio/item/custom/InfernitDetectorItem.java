@@ -18,8 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MetalDetectorItem extends Item {
-    public MetalDetectorItem(Properties pProperties) {
+public class InfernitDetectorItem extends Item {
+    public InfernitDetectorItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -42,7 +42,7 @@ public class MetalDetectorItem extends Item {
             }
 
             if(!foundBlock) {
-                player.sendSystemMessage(Component.literal("No S'ha Trobat Netherite"));
+                player.sendSystemMessage(Component.literal("No S'ha Trobat Infernit"));
             }
         }
 
@@ -54,7 +54,7 @@ public class MetalDetectorItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("tooltip.catsafio.metal_detector.tooltip"));
+        pTooltipComponents.add(Component.translatable("tooltip.catsafio.infernit_detector.tooltip"));
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
@@ -64,6 +64,7 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(Blocks.ANCIENT_DEBRIS);
+
+        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }

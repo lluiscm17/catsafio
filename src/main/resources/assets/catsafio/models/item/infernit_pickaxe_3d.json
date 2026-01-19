@@ -1,8 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
     "texture_size": [128, 128],
 	"textures": {
-		"1": "item/infernit_pickaxe_3d"
+      "1": "catsafio:item/infernit_pickaxe_3d",
+      "particle": "catsafio:item/infernit_pickaxe_3d"
 	},
 	"elements": [
 		{

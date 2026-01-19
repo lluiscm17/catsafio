@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "catsafio:motor_de_infernit"
+  },
+  "base": {
+    "item": "catsafio:rayolita_helmet"
+  },
+  "result": {
+    "item": "catsafio:casco_infernit"
+  },
+  "template": {
+    "item": "catsafio:infernit_upgrade_smithing_template"
+  }
+}

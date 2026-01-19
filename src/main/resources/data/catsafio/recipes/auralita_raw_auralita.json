@@ -1,0 +1,12 @@
+{
+  "type": "catsafio:horno_big",
+  "ingredients": [
+    {
+      "item": "catsafio:raw_auralita"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "catsafio:auralita"
+  }
+}

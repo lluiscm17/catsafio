@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PVP",
+    "SRS",
+    "PSP"
+  ],
+  "key": {
+    "S": {
+      "item": "catsafio:infernit"
+    },
+    "R": {
+      "item": "catsafio:infernit_upgrade_smithing_template"
+    },
+    "V": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "P": {
+      "item": "catsafio:cooked_iron_block"
+    }
+  },
+  "result": {
+    "item": "catsafio:motor_de_infernit",
+    "count": 1
+  }
+}

@@ -1,6 +1,20 @@
 package net.lluis.catsafio;
 
 import com.mojang.logging.LogUtils;
+import net.lluis.catsafio.block.ModBlocks;
+import net.lluis.catsafio.block.entity.ModBlockEntities;
+import net.lluis.catsafio.entity.ModEntities;
+import net.lluis.catsafio.entity.client.InfernalBullRenderer;
+import net.lluis.catsafio.entity.client.TortugaInfernalRenderer;
+import net.lluis.catsafio.item.ModCreativeModTabs;
+import net.lluis.catsafio.item.ModItems;
+import net.lluis.catsafio.loot.ModLootModifiers;
+import net.lluis.catsafio.recipe.ModRecipes;
+import net.lluis.catsafio.screen.HornoBigScreen;
+import net.lluis.catsafio.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,6 +38,19 @@ public class Catsafio {
     public Catsafio() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+        ModEntities.register(modEventBus);
+
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -36,7 +63,11 @@ public class Catsafio {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.INFERNIT);
+            event.accept(ModItems.RAW_INFERNIT);
+            event.accept(ModItems.INFERNIT_UPGRADE_SMITHING_TEMPLATE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -50,7 +81,10 @@ public class Catsafio {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            
+            EntityRenderers.register(ModEntities.INFERNAL_BULL.get(), InfernalBullRenderer::new);
+            EntityRenderers.register(ModEntities.TORTUGA_INFERNAL.get(), TortugaInfernalRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.HORNO_BIG_MENU.get(), HornoBigScreen::new);
         }
     }
 }

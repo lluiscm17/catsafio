@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "catsafio:auralita"
+  },
+  "base": {
+    "item": "catsafio:infernit_chestplate"
+  },
+  "result": {
+    "item": "catsafio:auralita_chestplate"
+  },
+  "template": {
+    "item": "catsafio:auralita_upgrade_smithing_template"
+  }
+}

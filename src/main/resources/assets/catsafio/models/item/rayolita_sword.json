@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "catsafio:item/rayolita_sword_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "catsafio:item/rayolita_sword_3d"
+    },
+    "ground": {
+      "parent": "catsafio:item/rayolita_sword_3d"
+    },
+    "fixed": {
+      "parent": "catsafio:item/rayolita_sword_3d"
+    }
+  }
+}

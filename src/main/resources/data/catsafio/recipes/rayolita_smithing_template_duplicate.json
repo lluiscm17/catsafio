@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SVS",
+    "SPS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:iron_block"
+    },
+    "V": {
+      "item": "catsafio:rayolita_upgrade_smithing_template"
+    },
+    "P": {
+      "item": "catsafio:cogollo"
+    }
+  },
+  "result": {
+    "item": "catsafio:rayolita_upgrade_smithing_template",
+    "count": 2
+  }
+}
