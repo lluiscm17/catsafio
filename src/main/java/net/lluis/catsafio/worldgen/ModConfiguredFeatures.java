@@ -30,14 +30,19 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> rayolitaOres = List.of(OreConfiguration.target(stoneReplaceable,
-                ModBlocks.RAYOLITA_ORE.get().defaultBlockState()),
+                        ModBlocks.RAYOLITA_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RAYOLITA_ORE.get().defaultBlockState()));
 
-        register(context, RAYOLITA_ORE_KEY, Feature.ORE, new OreConfiguration(rayolitaOres, 9));
+        // RAYOLITA - Tamaño de veta REDUCIDO de 9 a 5 bloques
+        register(context, RAYOLITA_ORE_KEY, Feature.ORE, new OreConfiguration(rayolitaOres, 5)); // ← ANTES: 9, AHORA: 5
+
+        // INFERNIT - Tamaño de veta REDUCIDO de 9 a 5 bloques
         register(context, INFERNIT_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.INFERNIT_ORE.get().defaultBlockState(), 9));
+                ModBlocks.INFERNIT_ORE.get().defaultBlockState(), 5)); // ← ANTES: 9, AHORA: 5
+
+        // AURALITA - Tamaño de veta REDUCIDO de 9 a 5 bloques
         register(context, AURALITA_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.AURALITA_ORE.get().defaultBlockState(), 9));
+                ModBlocks.AURALITA_ORE.get().defaultBlockState(), 5)); // ← ANTES: 9, AHORA: 5
 
     }
 

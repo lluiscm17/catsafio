@@ -23,7 +23,9 @@ import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 public class HornoBigBlock extends BaseEntityBlock {
-    public static VoxelShape SHAPE = Block.box(0, 0,0, 32, 32, 32);
+    // CORREGIDO: VoxelShape apropiado para que no se pueda atravesar
+    // El tamaño debe ser en unidades de 16 por bloque (16 = 1 bloque completo)
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
 
     public HornoBigBlock(Properties pProperties) {
         super(pProperties);
@@ -31,6 +33,12 @@ public class HornoBigBlock extends BaseEntityBlock {
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE;
+    }
+
+    // AÑADIDO: Método para la forma de colisión
+    @Override
+    public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
 
@@ -62,7 +70,7 @@ public class HornoBigBlock extends BaseEntityBlock {
             }
         }
 
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+        return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
     @Override

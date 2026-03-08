@@ -1,0 +1,55 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.FantRed",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "fantasmarojo",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "fantasmarojo",
+					"pivot": [0, 15.83333, 0],
+					"cubes": [
+						{"origin": [-7, 11, -7], "size": [14, 22, 14], "uv": [0, 0]},
+						{"origin": [-5, 31.5, -5], "size": [10, 3, 10], "uv": [0, 36]},
+						{"origin": [-7, 9, -7], "size": [14, 2, 0], "uv": [0, 49]},
+						{"origin": [-7, 9, 7], "size": [14, 2, 0], "uv": [0, 49]},
+						{"origin": [0, 9, 0], "size": [14, 2, 0], "pivot": [7, 10, 0], "rotation": [0, 90, 0], "uv": [0, 49]},
+						{"origin": [-14, 9, 0], "size": [14, 2, 0], "pivot": [-7, 10, 0], "rotation": [0, 90, 0], "uv": [0, 49]}
+					]
+				},
+				{
+					"name": "brazos",
+					"parent": "fantasmarojo",
+					"pivot": [0, 14, 0]
+				},
+				{
+					"name": "right_arm",
+					"parent": "brazos",
+					"pivot": [-10.5, 16.1, 0.5],
+					"cubes": [
+						{"origin": [-12.7819, 3.00476, -2], "size": [5, 13, 5], "pivot": [-10.5, 16, 0.5], "rotation": [0, 0, 2.5], "uv": [40, 36]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "brazos",
+					"pivot": [10.5, 16.1, 0.5],
+					"cubes": [
+						{"origin": [7.7819, 3.00476, -2], "size": [5, 13, 5], "pivot": [10.5, 16, 0.5], "rotation": [0, 0, -2.5], "uv": [40, 36], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

@@ -33,6 +33,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_AURALITA_BLOCK.get());
         this.dropSelf(ModBlocks.HORNO_BIG.get());
         this.dropSelf(ModBlocks.COOKED_IRON_BLOCK.get());
+        this.dropSelf(ModBlocks.CRISTAL_REFORZADO.get());
 
         this.add(ModBlocks.INFERNIT_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.INFERNIT_ORE.get(), ModItems.RAW_INFERNIT.get()));

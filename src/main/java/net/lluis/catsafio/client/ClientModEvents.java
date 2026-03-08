@@ -11,14 +11,14 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Catsafio.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-
 public class ClientModEvents {
+
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(CustomCascoInfernit.LAYER_LOCATION, CustomCascoInfernit::createBodyLayer);
         event.registerLayerDefinition(CustomHat.LAYER_LOCATION, CustomHat::createBodyLayer);
         event.registerLayerDefinition(CustomSuit.LAYER_LOCATION, CustomSuit::createBodyLayer);
         event.registerLayerDefinition(CustomPartyHat.LAYER_LOCATION, CustomPartyHat::createBodyLayer);
-    }
 
+    }
 }

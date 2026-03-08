@@ -51,11 +51,31 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RAYOLITA_SWORD.get());
                         pOutput.accept(ModItems.BASTION_SWORD.get());
                         pOutput.accept(ModItems.HEALING_SWORD.get());
+                        pOutput.accept(ModItems.PHANTOM_SWORD.get());
                         pOutput.accept(ModItems.INFERNIT_STAFF.get());
                         pOutput.accept(ModItems.INFERNAL_BULL_SPAWN_EGG.get());
                         pOutput.accept(ModItems.TORTUGA_INFERNAL_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.FANTASMA_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.CREEPER_CAKE_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.SAPO_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.HEART.get());
                         pOutput.accept(ModItems.HORN.get());
                         pOutput.accept(ModItems.STONE_WORM.get());
+                        pOutput.accept(ModItems.SANGRE_DE_GORGONA.get());
+                        pOutput.accept(ModItems.RECIPE_BOOK.get());
+                        pOutput.accept(ModItems.OJO_DE_SAPO.get());
+                        pOutput.accept(ModItems.DEDITA_CELESTE.get());
+                        pOutput.accept(ModItems.DEDITA_NARANJA.get());
+                        pOutput.accept(ModItems.DEDITA_AZUL.get());
+                        pOutput.accept(ModItems.ALA_DE_MURCIELAGO_WARDEN.get());
+                        pOutput.accept(ModItems.MURCIELAGO_WARDEN_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.ORB_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.FLASHBANG_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.RUNA_SPAWN_ITEM.get());
+                        pOutput.accept(ModItems.RUNA_REMOVER.get());
+                        pOutput.accept(ModItems.WILDFIRE_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.CREEPER_WARDEN_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.GORGONA_SPAWN_EGG.get());
 
                         pOutput.accept(ModItems.RAYOLITA_BOOTS.get());
                         pOutput.accept(ModItems.RAYOLITA_LEGGINS.get());
@@ -83,6 +103,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.AURALITA_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_AURALITA_BLOCK.get());
                         pOutput.accept(ModBlocks.COOKED_IRON_BLOCK.get());
+                        pOutput.accept(ModBlocks.CRISTAL_REFORZADO.get());
 
 
                         pOutput.accept(ModBlocks.HORNO_BIG.get());

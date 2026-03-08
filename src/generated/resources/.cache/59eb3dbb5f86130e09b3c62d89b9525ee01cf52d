@@ -1,7 +1,8 @@
-// 1.20.1	2026-01-18T21:34:47.6600159	Loot Tables
+// 1.20.1	2026-02-16T12:26:05.6123491	Loot Tables
 d474ea1125c133c758336fc2c37c9d3afc605e9b data/catsafio/loot_tables/blocks/auralita_block.json
 527d6b12507ffcae117eb6614fd0d856b925797c data/catsafio/loot_tables/blocks/auralita_ore.json
 621bd38a048053e7b9ff39fcc01514c193fd892b data/catsafio/loot_tables/blocks/cooked_iron_block.json
+3aa7ce001d2a58d99c823abd862e7b0329a0826c data/catsafio/loot_tables/blocks/cristal_reforzado.json
 19bea483711e7b25c9123f1f83a30061a5324fe5 data/catsafio/loot_tables/blocks/deepslate_rayolita_ore.json
 23afbecd8fa697749bba1c6cc253c8f774e361f2 data/catsafio/loot_tables/blocks/horno_big.json
 d19e2153c55bd19f441d8122dbe08795b7b40d76 data/catsafio/loot_tables/blocks/infernit_block.json

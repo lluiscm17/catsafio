@@ -4,7 +4,7 @@
     "item": "catsafio:motor_de_infernit"
   },
   "base": {
-    "item": "catsafio:rayolita_helmet"
+    "item": "minecraft:netherite_helmet"
   },
   "result": {
     "item": "catsafio:casco_infernit"

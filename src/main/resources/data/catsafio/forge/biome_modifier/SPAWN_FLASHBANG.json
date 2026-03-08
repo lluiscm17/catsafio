@@ -1,0 +1,7 @@
+{
+  "mob": "catsafio:flashbang",
+  "minCount": 1,
+  "maxCount": 3,
+  "weight": 15,
+  "biomes": "#minecraft:is_overworld"
+}

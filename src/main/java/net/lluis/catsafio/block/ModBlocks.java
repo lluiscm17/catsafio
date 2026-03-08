@@ -27,6 +27,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops()));
 
+    // CRISTAL_REFORZADO con transparencia correcta
+    public static final RegistryObject<Block> CRISTAL_REFORZADO = registerBlock("cristal_reforzado",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLASS)
+                    .sound(SoundType.GLASS)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()) // Permite transparencia
+    );
+
     public static final RegistryObject<Block> COOKED_IRON_BLOCK = registerBlock("cooked_iron_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
 

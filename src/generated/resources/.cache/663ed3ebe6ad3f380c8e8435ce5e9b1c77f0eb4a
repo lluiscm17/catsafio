@@ -1,7 +1,4 @@
-// 1.20.1	2026-01-18T21:34:47.6610168	Tags for minecraft:block mod id catsafio
+// 1.20.1	2026-02-16T12:26:05.6133483	Tags for minecraft:block mod id catsafio
 63dd11e75a61a3ac77feb5b209741e9ab75d5d5e data/catsafio/tags/blocks/metal_detector_valuables.json
-ce393e3234021684e72d5903cf67dab29e697592 data/catsafio/tags/blocks/needs_auralita_tool.json
-012e08d3586f3f61bb476279c1b82bab77b63cbe data/catsafio/tags/blocks/needs_infernit_tool.json
-cea573f58f82fe6bde79db416b5863495e466295 data/catsafio/tags/blocks/needs_rayolita_tool.json
-43173293716c3e99dbe9c4ae0e41bb87ddb16b9c data/forge/tags/blocks/needs_netherite_tool.json
-9fb8a5ee17d4b3122b194cae5c37927b67221e58 data/minecraft/tags/blocks/mineable/pickaxe.json
+93287725b0963faaefb0a3dd8151fb3389df3b71 data/forge/tags/blocks/needs_netherite_tool.json
+9ea3d6cadef5506d1c2606d1ad470871a3cdf6cb data/minecraft/tags/blocks/mineable/pickaxe.json

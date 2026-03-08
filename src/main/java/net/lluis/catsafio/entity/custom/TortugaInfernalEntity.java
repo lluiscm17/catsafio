@@ -1,9 +1,7 @@
 package net.lluis.catsafio.entity.custom;
 
 import net.lluis.catsafio.entity.ModEntities;
-import net.lluis.catsafio.entity.ai.InfernalBullAttackGoal;
 import net.lluis.catsafio.entity.ai.TortugaInfernalAttackGoal;
-import net.lluis.catsafio.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -93,7 +91,7 @@ public class TortugaInfernalEntity extends Animal {
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(ATTACKING, true);
+        this.entityData.define(ATTACKING, false);
     }
 
     @Override
@@ -116,12 +114,12 @@ public class TortugaInfernalEntity extends Animal {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 75D)
+                .add(Attributes.MAX_HEALTH, 80D)
                 .add(Attributes.FOLLOW_RANGE, 30D)
                 .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 1f)
-                .add(Attributes.ATTACK_DAMAGE, 10f);
+                .add(Attributes.ATTACK_DAMAGE, 15f);
     }
 
     @Nullable

@@ -23,16 +23,19 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        // RAYOLITA - Solo Deep Dark, frecuencia aumentada para compensar rareza del bioma
         register(context, RAYOLITA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RAYOLITA_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+                ModOrePlacement.commonOrePlacement(8,  // Mayor frecuencia porque Deep Dark es muy raro
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)))); // Solo profundo
 
+        // INFERNIT - Frecuencia REDUCIDA de 12 a 4 (3x menos común)
         register(context, INFERNIT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.INFERNIT_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
+                ModOrePlacement.commonOrePlacement(4,  // ← ANTES: 12, AHORA: 4
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
+        // AURALITA - Frecuencia REDUCIDA de 12 a 4 (3x menos común)
         register(context, AURALITA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AURALITA_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
+                ModOrePlacement.commonOrePlacement(4,  // ← ANTES: 12, AHORA: 4
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 

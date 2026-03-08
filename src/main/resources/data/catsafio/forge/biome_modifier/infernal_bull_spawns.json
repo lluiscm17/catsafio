@@ -3,7 +3,7 @@
   "biomes": "#minecraft:is_nether",
   "spawners": {
     "type": "catsafio:infernal_bull",
-    "weight": 150,
+    "weight": 25,
     "minCount": 1,
     "maxCount": 2
   }

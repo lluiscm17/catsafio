@@ -1,7 +1,6 @@
 package net.lluis.catsafio.datagen;
 
 import net.lluis.catsafio.Catsafio;
-import net.lluis.catsafio.block.ModBlocks;
 import net.lluis.catsafio.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -11,12 +10,10 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
@@ -59,6 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CASINO_COIN_50);
         simpleItem(ModItems.CASINO_COIN_100);
         simpleItem(ModItems.PORRO);
+        simpleItem(ModItems.OJO_DE_SAPO);
         simpleItem(ModItems.MARIGUANA_LEAF);
         simpleItem(ModItems.BRONZE_CATCOIN);
         simpleItem(ModItems.SILVER_CATCOIN);
@@ -70,9 +68,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAYOLITA_UPGRADE_SMITHING_TEMPLATE);
         simpleItem(ModItems.COOKED_IRON);
         simpleItem(ModItems.MOTOR_DE_INFERNIT);
+        simpleItem(ModItems.HEART);
+        simpleItem(ModItems.ALA_DE_MURCIELAGO_WARDEN);
+        simpleItem(ModItems.RUNA_SPAWN_ITEM);
+        simpleItem(ModItems.RUNA_REMOVER);
+        simpleItem(ModItems.SANGRE_DE_GORGONA);
 
         handheldItem(ModItems.BASTION_SWORD);
         handheldItem(ModItems.HEALING_SWORD);
+        handheldItem(ModItems.PHANTOM_SWORD);
 
 
         trimmedArmorItem(ModItems.INFERNIT_CHESTPLATE);
@@ -94,6 +98,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(ModItems.INFERNAL_BULL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.TORTUGA_INFERNAL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.FANTASMA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SAPO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.CREEPER_CAKE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.FLASHBANG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.WILDFIRE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.MURCIELAGO_WARDEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.ORB_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.CREEPER_WARDEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.GORGONA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

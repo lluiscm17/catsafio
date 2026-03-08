@@ -2,13 +2,14 @@
   "values": [
     "catsafio:infernit_ore",
     "catsafio:raw_infernit_block",
-    "catsafio:infernit_ore",
     "catsafio:auralita_ore",
     "catsafio:auralita_block",
     "catsafio:rayolita_ore",
     "catsafio:deepslate_rayolita_ore",
     "catsafio:raw_auralita_block",
     "catsafio:horno_big",
+    "catsafio:cooked_iron_block",
+    "catsafio:cristal_reforzado",
     "catsafio:infernit_block"
   ]
 }

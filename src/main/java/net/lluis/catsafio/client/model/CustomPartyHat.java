@@ -5,6 +5,7 @@ package net.lluis.catsafio.client.model;// Made with Blockbench 5.0.7
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.lluis.catsafio.Catsafio;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -15,7 +16,7 @@ import net.minecraft.world.entity.Entity;
 
 public class CustomPartyHat<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Catsafio.MOD_ID, "custom_party_hat"), "main");
 	public final ModelPart Waist;
 	public final ModelPart Head;
 

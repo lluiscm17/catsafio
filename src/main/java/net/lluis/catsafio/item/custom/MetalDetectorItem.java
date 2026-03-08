@@ -30,7 +30,9 @@ public class MetalDetectorItem extends Item {
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
 
-            for(int i = 0; i<= positionClicked.getY() + 64; i++) {
+            // CORREGIDO: Ahora busca hacia abajo hasta el límite inferior del mundo
+            int minY = pContext.getLevel().getMinBuildHeight();
+            for(int i = 0; i <= positionClicked.getY() - minY; i++) {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
                 if(isValuableBlock(state)) {

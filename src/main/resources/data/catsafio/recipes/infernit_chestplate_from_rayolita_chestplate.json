@@ -4,7 +4,7 @@
     "item": "catsafio:motor_de_infernit"
   },
   "base": {
-    "item": "catsafio:rayolita_chestplate"
+    "item": "minecraft:netherite_chestplate"
   },
   "result": {
     "item": "catsafio:infernit_chestplate"

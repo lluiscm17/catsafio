@@ -10,13 +10,13 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    INFERNIT("infernit", 26, new int[]{ 7, 12, 10, 7 }, 25,
+    INFERNIT("infernit", 45, new int[]{ 5, 10, 8, 5 }, 25,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 1f, 0f, () -> Ingredient.of(ModItems.INFERNIT.get())),
-    RAYOLITA("rayolita", 26, new int[]{ 5, 10, 8, 5 }, 25,
+    RAYOLITA("rayolita", 40, new int[]{ 5, 10, 8, 5 }, 25,
     SoundEvents.ARMOR_EQUIP_DIAMOND, 1f, 0f, () -> Ingredient.of(ModItems.RAYOLITA.get())),
-    HAT("hat", 26, new int[]{ 2, 1, 1, 1 }, 25,
+    HAT("hat", 45, new int[]{ 2, 1, 1, 1 }, 25,
             SoundEvents.ARMOR_EQUIP_CHAIN, 1f, 0f, () -> Ingredient.of(ModItems.HORN.get())),
-    AURALITA("auralita", 26, new int[]{ 9, 14, 12, 9 }, 25,
+    AURALITA("auralita", 50, new int[]{ 7, 12, 10, 7 }, 25,
             SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(ModItems.AURALITA.get()));
 
 

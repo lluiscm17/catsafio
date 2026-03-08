@@ -1,4 +1,5 @@
-// 1.20.1	2026-01-18T13:02:12.0106538	Item Models: catsafio
+// 1.20.1	2026-02-24T18:51:38.6218975	Item Models: catsafio
+30b7f8be7f43ec32aa706663502fdb7043bf7937 assets/catsafio/models/item/ala_de_murcielago_warden.json
 9ca9d350a25106c19eda9479dc3fe177d07148f5 assets/catsafio/models/item/alive_potato.json
 e78246f53a1f7d993834816f0bde516d5852be90 assets/catsafio/models/item/auralita.json
 9a8de62b0621843bea2acc8f98f795a58a6f0bbf assets/catsafio/models/item/auralita_boots.json
@@ -65,7 +66,12 @@ e315fa5d74fa5adebade300f43cd5eaa52dce5d0 assets/catsafio/models/item/casino_coin
 ed47d1878b3287b5f980f8456f63b7b8ba599286 assets/catsafio/models/item/casino_coin_50.json
 53fe1ee7b9956eb45a76db47854a3e494b11c9b4 assets/catsafio/models/item/cogollo.json
 ca5edb579b0427b607c8d96bc890dc43bbe7daf2 assets/catsafio/models/item/cooked_iron.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/creepercake_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/creeper_warden_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/fantasma_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/flashbang_spawn_egg.json
 c1c44e9bef4d4bf2ea892a1ce3dc83d98946bda5 assets/catsafio/models/item/gold_catcoin.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/gorgona_spawn_egg.json
 7dea3bd579d3f8ba734a9275e751fde646d446e3 assets/catsafio/models/item/hat.json
 977d1d4946aba0622d618a91620189a8c2270c31 assets/catsafio/models/item/hat_amethyst_trim.json
 13738dfad877716c2d2d70c10b537c3cf8b37897 assets/catsafio/models/item/hat_copper_trim.json
@@ -78,6 +84,7 @@ c1c44e9bef4d4bf2ea892a1ce3dc83d98946bda5 assets/catsafio/models/item/gold_catcoi
 843eb0a912949d5f963900776a08e4d537617607 assets/catsafio/models/item/hat_quartz_trim.json
 d9dbc28ce4416becd8392bb0bb26e90e5ecee72c assets/catsafio/models/item/hat_redstone_trim.json
 8468cb732a84ef5aa72af29c256619bdd0f7a1dd assets/catsafio/models/item/healing_sword.json
+ca2bbbe36f5d9fa006382a4ed906033e31aff324 assets/catsafio/models/item/heart.json
 33d2054ad9bd623926caec41f6913c65281e1178 assets/catsafio/models/item/horn.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/infernal_bull_spawn_egg.json
 8e91e869f94651b304de8971ebf939d5ef336de3 assets/catsafio/models/item/infernit.json
@@ -119,6 +126,9 @@ c721364a013211ee764e22053624177c993ce0e3 assets/catsafio/models/item/infernit_le
 89274ff6bac44263e14fdd15dd0187a7f999499b assets/catsafio/models/item/mariguana_leaf.json
 8b1aa1b96a853d148702fab6c29da88948f87a51 assets/catsafio/models/item/metal_detector.json
 201ed0a481108fa93d0887c57142105e358043de assets/catsafio/models/item/motor_de_infernit.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/murcielago_warden_spawn_egg.json
+032937df73b9af6e2fc5b1b58a806a8159ae5cc6 assets/catsafio/models/item/ojo_de_sapo.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/orb_spawn_egg.json
 4125c9d1c2f59429744cd9c1e377508c0bf26778 assets/catsafio/models/item/party_hat.json
 00793d04c2e52ed566f08cdc7ec69c02e6d5503a assets/catsafio/models/item/party_hat_amethyst_trim.json
 caea97b368cc176af1f0600c49fb838ec7eb4a64 assets/catsafio/models/item/party_hat_copper_trim.json
@@ -130,6 +140,7 @@ caea97b368cc176af1f0600c49fb838ec7eb4a64 assets/catsafio/models/item/party_hat_c
 53b8c89117064d3bee907fdb80d3e838b2ae53fe assets/catsafio/models/item/party_hat_netherite_trim.json
 62463f085a774dcdca51929fbbf9b96ae6dac3bf assets/catsafio/models/item/party_hat_quartz_trim.json
 0ac55c94754d67a8d4494c522d41f3d1e5771588 assets/catsafio/models/item/party_hat_redstone_trim.json
+72a0778f2a1fe174b1008102c00142aa20b4bdbd assets/catsafio/models/item/phantom_sword.json
 af501938495f2d9919e1465bcbff8518e47dc353 assets/catsafio/models/item/platinium_catcoin.json
 6c1b083fbe2de1397ba6c9fa296b900a39382c6d assets/catsafio/models/item/pokelito.json
 cfbdd467773b9df0a00fa4a6f66738efbae5cbec assets/catsafio/models/item/porro.json
@@ -182,6 +193,11 @@ d700accd5c797f0e4707a66a97298d81e610cf36 assets/catsafio/models/item/rayolita_le
 18c46445ccd2e3c7191cf9c0b13d817c693c9ea4 assets/catsafio/models/item/rayolita_leggins_quartz_trim.json
 52a25b1747e4ecf12c15f649cb9a4654ed5f7ce3 assets/catsafio/models/item/rayolita_leggins_redstone_trim.json
 686ebcfe45e21c39f6ec2c2896e88a7380831a92 assets/catsafio/models/item/rayolita_upgrade_smithing_template.json
+94344bda8ef8167e4c12c5c59ef9b3db6229d025 assets/catsafio/models/item/runa_remover.json
+363f2640da45578d85c3fa9219235a8609573657 assets/catsafio/models/item/runa_spawn_item.json
+5e568f6696d9d2f6f1cb50c48604e25f8d3bd96b assets/catsafio/models/item/sangre_de_gorgona.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/sapo_spawn_egg.json
 0ae4109d8176e28c9205927ce6ebdbccdba3fb47 assets/catsafio/models/item/silver_catcoin.json
 2234ff9edbe444c3af39d143a823918f8662435b assets/catsafio/models/item/stone_worm.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/tortuga_infernal_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/catsafio/models/item/wildfire_spawn_egg.json

@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "catsafio:item/dedita_celeste_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "catsafio:item/dedita_celeste_3d"
+    },
+    "ground": {
+      "parent": "catsafio:item/dedita_celeste_3d"
+    },
+    "fixed": {
+      "parent": "catsafio:item/dedita_celeste_3d"
+    }
+  }
+}

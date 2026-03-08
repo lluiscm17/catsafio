@@ -26,50 +26,30 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.INFERNIT_ORE.get(),
                         ModBlocks.RAW_INFERNIT_BLOCK.get(),
-                        ModBlocks.INFERNIT_ORE.get(),
                         ModBlocks.AURALITA_ORE.get(),
                         ModBlocks.AURALITA_BLOCK.get(),
                         ModBlocks.RAYOLITA_ORE.get(),
                         ModBlocks.DEEPSLATE_RAYOLITA_ORE.get(),
                         ModBlocks.RAW_AURALITA_BLOCK.get(),
                         ModBlocks.HORNO_BIG.get(),
+                        ModBlocks.COOKED_IRON_BLOCK.get(),
+                        ModBlocks.CRISTAL_REFORZADO.get(),
                         ModBlocks.INFERNIT_BLOCK.get()
                 );
 
-        this.tag(ModTags.Blocks.NEEDS_AURALITA_TOOL)
-                .add(ModBlocks.AURALITA_ORE.get(),
-                        ModBlocks.AURALITA_BLOCK.get(),
-                        ModBlocks.INFERNIT_ORE.get(),
-                        ModBlocks.INFERNIT_BLOCK.get(),
-                        ModBlocks.RAW_INFERNIT_BLOCK.get(),
-                        ModBlocks.RAYOLITA_ORE.get(),
-                        ModBlocks.DEEPSLATE_RAYOLITA_ORE.get(),
-                        ModBlocks.RAW_AURALITA_BLOCK.get(),
-                        ModBlocks.HORNO_BIG.get()
-                );
-        this.tag(ModTags.Blocks.NEEDS_INFERNIT_TOOL)
-                .add(ModBlocks.AURALITA_ORE.get(),
-                        ModBlocks.RAW_AURALITA_BLOCK.get(),
-                        ModBlocks.RAYOLITA_ORE.get(),
-                        ModBlocks.INFERNIT_ORE.get(),
-                        ModBlocks.DEEPSLATE_RAYOLITA_ORE.get(),
-                        ModBlocks.AURALITA_BLOCK.get(),
-                        ModBlocks.INFERNIT_BLOCK.get(),
-                        ModBlocks.RAW_INFERNIT_BLOCK.get(),
-                        ModBlocks.HORNO_BIG.get()
-                );
-        this.tag(ModTags.Blocks.NEEDS_RAYOLITA_TOOL)
-                .add(ModBlocks.INFERNIT_ORE.get(),
-                        ModBlocks.INFERNIT_BLOCK.get(),
-                        ModBlocks.RAW_INFERNIT_BLOCK.get(),
-                        ModBlocks.RAYOLITA_ORE.get(),
-                        ModBlocks.DEEPSLATE_RAYOLITA_ORE.get(),
-                        ModBlocks.HORNO_BIG.get()
-                );
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.RAYOLITA_ORE.get(),
+                        ModBlocks.AURALITA_BLOCK.get(),
+                        ModBlocks.INFERNIT_ORE.get(),
+                        ModBlocks.INFERNIT_BLOCK.get(),
+                        ModBlocks.RAW_INFERNIT_BLOCK.get(),
                         ModBlocks.DEEPSLATE_RAYOLITA_ORE.get(),
+                        ModBlocks.RAW_AURALITA_BLOCK.get(),
+                        ModBlocks.AURALITA_ORE.get(),
+                        ModBlocks.COOKED_IRON_BLOCK.get(),
+                        ModBlocks.CRISTAL_REFORZADO.get(),
                         ModBlocks.HORNO_BIG.get()
                 );
+
     }
 }

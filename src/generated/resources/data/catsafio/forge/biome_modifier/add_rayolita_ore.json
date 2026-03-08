@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "minecraft:deep_dark",
   "features": "catsafio:rayolita_ore_placed",
   "step": "underground_ores"
 }

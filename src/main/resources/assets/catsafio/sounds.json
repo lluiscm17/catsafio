@@ -1,0 +1,40 @@
+{
+  "flashbang_sound": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "catsafio:flashbang_sound",
+        "stream": false
+      }
+    ]
+  },
+
+  "death_animation": {
+    "subtitle": "subtitles.catsafio.death_animation",
+    "sounds": [
+      {
+        "name": "catsafio:death_animation",
+        "stream": false
+      }
+    ]
+  },
+
+  "ruleta": {
+    "subtitle": "subtitles.catsafio.ruleta",
+    "sounds": [
+      {
+        "name": "catsafio:ruleta",
+        "stream": false
+      }
+    ]
+  },
+  "ruleta_rosada": {
+    "subtitle": "subtitles.catsafio.ruleta_rosada",
+    "sounds": [
+      {
+        "name": "catsafio:ruleta_rosada",
+        "stream": false
+      }
+    ]
+  }
+}
