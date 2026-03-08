@@ -69,8 +69,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<TaxiVoladorEntity>> TAXI_VOLADOR =
             ENTITY_TYPES.register("taxi_volador",
                     () -> EntityType.Builder.of(TaxiVoladorEntity::new, MobCategory.MISC)
-                            .sized(2.5f, 2.0f) // Tamaño del taxi (ancho x alto)
+                            .sized(2.5f, 2.0f)
                             .clientTrackingRange(10)
+                            .updateInterval(1) // Sync cada tick para movimiento fluido
                             .build("taxi_volador"));
 
     // NUEVA ENTIDAD: RUNA

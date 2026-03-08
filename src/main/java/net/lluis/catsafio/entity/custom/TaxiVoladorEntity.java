@@ -12,6 +12,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -67,37 +68,20 @@ public class TaxiVoladorEntity extends Entity implements GeoEntity {
 
                 handleFlightControls(player);
             } else {
-                // Sin conductor, caer suavemente
-                verticalMomentum *= 0.95;
-                verticalMomentum -= 0.05;
-
-                this.setDeltaMovement(
-                        this.getDeltaMovement().x * 0.9,
-                        verticalMomentum,
-                        this.getDeltaMovement().z * 0.9
-                );
+                // Sin conductor: flotar en el aire, no caer
+                Vec3 cur = this.getDeltaMovement();
+                this.setDeltaMovement(cur.x * 0.8, 0, cur.z * 0.8);
+                verticalMomentum = 0;
             }
 
-            // Aplicar movimiento con sincronización explícita
-            Vec3 motion = this.getDeltaMovement();
+            // move() aplica colisión con bloques correctamente (setPos la ignoraba)
+            this.move(MoverType.SELF, this.getDeltaMovement());
 
-            this.setPos(
-                    this.getX() + motion.x,
-                    this.getY() + motion.y,
-                    this.getZ() + motion.z
-            );
-
-            // CRÍTICO: Forzar sincronización al cliente
-            this.hasImpulse = true;
-
-            // Aterrizar
+            // Al tocar el suelo detener momentum vertical
             if (this.onGround()) {
                 verticalMomentum = 0;
-                this.setDeltaMovement(
-                        this.getDeltaMovement().x * 0.8,
-                        0,
-                        this.getDeltaMovement().z * 0.8
-                );
+                Vec3 cur = this.getDeltaMovement();
+                this.setDeltaMovement(cur.x * 0.8, 0, cur.z * 0.8);
             }
         }
     }
@@ -110,57 +94,41 @@ public class TaxiVoladorEntity extends Entity implements GeoEntity {
         float forward = player.zza;
         float strafe = player.xxa;
 
-        // Si no hay input, usar detección alternativa
-        if (Math.abs(forward) < 0.01 && Math.abs(strafe) < 0.01) {
-            Vec3 playerVel = player.getDeltaMovement();
-            if (playerVel.horizontalDistance() > 0.01) {
-                forward = 1.0f;
-            }
-        }
-
-        // Calcular movimiento
+        // Calcular velocidad horizontal objetivo
         Vec3 lookVec = Vec3.directionFromRotation(0, yaw);
         Vec3 rightVec = new Vec3(-lookVec.z, 0, lookVec.x).normalize();
 
-        double motionX = 0;
-        double motionZ = 0;
+        double targetX = 0;
+        double targetZ = 0;
 
-        // Movimiento adelante/atrás
         if (Math.abs(forward) > 0.01) {
-            motionX += lookVec.x * forward * FLIGHT_SPEED;
-            motionZ += lookVec.z * forward * FLIGHT_SPEED;
+            targetX += lookVec.x * forward * FLIGHT_SPEED;
+            targetZ += lookVec.z * forward * FLIGHT_SPEED;
         }
-
-        // Movimiento izquierda/derecha
         if (Math.abs(strafe) > 0.01) {
-            motionX += rightVec.x * strafe * FLIGHT_SPEED;
-            motionZ += rightVec.z * strafe * FLIGHT_SPEED;
+            targetX += rightVec.x * strafe * FLIGHT_SPEED;
+            targetZ += rightVec.z * strafe * FLIGHT_SPEED;
         }
 
-        // Control vertical
-        boolean isMoving = Math.abs(forward) > 0.01 || Math.abs(strafe) > 0.01;
+        // Lerp horizontal: suaviza aceleración y frenado para evitar tirones
+        Vec3 current = this.getDeltaMovement();
+        double smoothX = current.x + (targetX - current.x) * 0.4;
+        double smoothZ = current.z + (targetZ - current.z) * 0.4;
 
-        // player.jumping = tecla ESPACIO; cuando está montado, getDeltaMovement().y siempre es ~0
+        // Control vertical con lerp (evita cambios bruscos de velocidad vertical)
         if (player.jumping) {
-            verticalMomentum = VERTICAL_SPEED;
+            verticalMomentum += (VERTICAL_SPEED - verticalMomentum) * 0.4;
         } else if (player.isShiftKeyDown()) {
-            // Shift para descender
-            verticalMomentum = -VERTICAL_SPEED;
-        } else if (isMoving) {
-            if (verticalMomentum < 0.05) {
-                verticalMomentum = 0.05;
-            }
-            verticalMomentum *= HOVER_DECAY;
+            verticalMomentum += (-VERTICAL_SPEED - verticalMomentum) * 0.4;
         } else {
-            verticalMomentum *= 0.95;
-            verticalMomentum -= 0.03;
+            // Sin input vertical: frenar suavemente hasta 0
+            verticalMomentum *= 0.85;
+            if (Math.abs(verticalMomentum) < 0.005) verticalMomentum = 0;
         }
 
-        // Limitar velocidad
         verticalMomentum = Math.max(-1.0, Math.min(1.0, verticalMomentum));
 
-        // Aplicar movimiento
-        this.setDeltaMovement(motionX, verticalMomentum, motionZ);
+        this.setDeltaMovement(smoothX, verticalMomentum, smoothZ);
     }
 
     @Override
