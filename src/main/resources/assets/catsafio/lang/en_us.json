@@ -71,6 +71,10 @@
   "block.catsafio.deepslate_rayolita_ore": "Deepslate Rayolita Ore",
   "block.catsafio.raw_auralita_block": "Raw Auralita Block",
   "block.catsafio.horno_porno": "Horno Porno",
-  "block.catsafio.horno_big": "Horno Big"
+  "block.catsafio.horno_big": "Horno Big",
+
+  "item.catsafio.lingote_nereida": "Nereida Ingot",
+  "block.catsafio.mena_nereida": "Nereida Ore",
+  "block.catsafio.bloque_nereida": "Block of Nereida"
 
 }

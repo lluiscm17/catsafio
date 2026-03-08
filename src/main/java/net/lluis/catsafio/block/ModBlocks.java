@@ -67,6 +67,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> MARIHUANA_CROP = registerBlock("marihuana_crop",
             () -> new MarihuanaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    // NEREIDA
+    public static final RegistryObject<Block> MENA_NEREIDA = registerBlock("mena_nereida",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
+                    .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+    public static final RegistryObject<Block> BLOQUE_NEREIDA = registerBlock("bloque_nereida",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -219,6 +219,10 @@ public class ModItems {
                     .stacksTo(1)
                     .rarity(Rarity.EPIC)));
 
+    // NEREIDA
+    public static final RegistryObject<Item> LINGOTE_NEREIDA = ITEMS.register("lingote_nereida",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

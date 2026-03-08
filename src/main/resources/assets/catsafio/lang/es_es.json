@@ -104,5 +104,9 @@
   "gui.catsafio.quest_menu": "Misiones",
   "gui.catsafio.quest_button.tooltip": "Abrir menú de misiones",
   "gui.catsafio.hub_button.tooltip": "Abrir menú principal",
-  "gui.catsafio.catpedia": "Catpedia"
+  "gui.catsafio.catpedia": "Catpedia",
+
+  "item.catsafio.lingote_nereida": "Lingote de Nereida",
+  "block.catsafio.mena_nereida": "Mena de Nereida",
+  "block.catsafio.bloque_nereida": "Bloque de Nereida"
 }

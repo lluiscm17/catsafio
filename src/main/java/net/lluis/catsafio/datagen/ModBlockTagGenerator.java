@@ -21,7 +21,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
-                .add(ModBlocks.INFERNIT_ORE.get());
+                .add(ModBlocks.INFERNIT_ORE.get(),
+                        ModBlocks.MENA_NEREIDA.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.INFERNIT_ORE.get(),
@@ -34,7 +35,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.HORNO_BIG.get(),
                         ModBlocks.COOKED_IRON_BLOCK.get(),
                         ModBlocks.CRISTAL_REFORZADO.get(),
-                        ModBlocks.INFERNIT_BLOCK.get()
+                        ModBlocks.INFERNIT_BLOCK.get(),
+                        ModBlocks.MENA_NEREIDA.get(),
+                        ModBlocks.BLOQUE_NEREIDA.get()
                 );
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
@@ -48,7 +51,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.AURALITA_ORE.get(),
                         ModBlocks.COOKED_IRON_BLOCK.get(),
                         ModBlocks.CRISTAL_REFORZADO.get(),
-                        ModBlocks.HORNO_BIG.get()
+                        ModBlocks.HORNO_BIG.get(),
+                        ModBlocks.MENA_NEREIDA.get(),
+                        ModBlocks.BLOQUE_NEREIDA.get()
                 );
 
     }

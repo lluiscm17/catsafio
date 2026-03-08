@@ -79,6 +79,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_AURALITA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_AURALITA_BLOCK.get()), has(ModBlocks.RAW_AURALITA_BLOCK.get()))
                 .save(pWriter);
+
+        // NEREIDA
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOQUE_NEREIDA.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.LINGOTE_NEREIDA.get())
+                .unlockedBy(getHasName(ModItems.LINGOTE_NEREIDA.get()), has(ModItems.LINGOTE_NEREIDA.get()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LINGOTE_NEREIDA.get(), 9)
+                .requires(ModBlocks.BLOQUE_NEREIDA.get())
+                .unlockedBy(getHasName(ModBlocks.BLOQUE_NEREIDA.get()), has(ModBlocks.BLOQUE_NEREIDA.get()))
+                .save(pWriter);
+        oreSmelting(pWriter, List.of(ModBlocks.MENA_NEREIDA.get()), RecipeCategory.MISC,
+                ModItems.LINGOTE_NEREIDA.get(), 0.7f, 200, "nereida");
+        oreBlasting(pWriter, List.of(ModBlocks.MENA_NEREIDA.get()), RecipeCategory.MISC,
+                ModItems.LINGOTE_NEREIDA.get(), 0.7f, 100, "nereida");
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

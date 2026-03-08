@@ -105,6 +105,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.COOKED_IRON_BLOCK.get());
                         pOutput.accept(ModBlocks.CRISTAL_REFORZADO.get());
 
+                        pOutput.accept(ModItems.LINGOTE_NEREIDA.get());
+                        pOutput.accept(ModBlocks.MENA_NEREIDA.get());
+                        pOutput.accept(ModBlocks.BLOQUE_NEREIDA.get());
+
 
                         pOutput.accept(ModBlocks.HORNO_BIG.get());
                         pOutput.accept(ModItems.HAT.get());

@@ -73,6 +73,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUNA_SPAWN_ITEM);
         simpleItem(ModItems.RUNA_REMOVER);
         simpleItem(ModItems.SANGRE_DE_GORGONA);
+        simpleItem(ModItems.LINGOTE_NEREIDA);
 
         handheldItem(ModItems.BASTION_SWORD);
         handheldItem(ModItems.HEALING_SWORD);

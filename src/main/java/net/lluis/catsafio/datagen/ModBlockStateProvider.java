@@ -36,6 +36,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAYOLITA_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_RAYOLITA_ORE);
 
+        // NEREIDA
+        blockWithItem(ModBlocks.MENA_NEREIDA);
+        blockWithItem(ModBlocks.BLOQUE_NEREIDA);
+
         makeMarihuanaCrop(((CropBlock) ModBlocks.MARIHUANA_CROP.get()), "marihuana_stage_", "marihuana_stage_");
 
         simpleBlock(ModBlocks.HORNO_BIG.get(),

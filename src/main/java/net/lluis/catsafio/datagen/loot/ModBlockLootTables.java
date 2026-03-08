@@ -54,6 +54,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.MARIHUANA_CROP.get(), createCropDrops(ModBlocks.MARIHUANA_CROP.get(), ModItems.MARIGUANA_LEAF.get(),
                 ModItems.COGOLLO.get(), lootitemcondition$builder2));
+
+        // NEREIDA
+        this.dropSelf(ModBlocks.BLOQUE_NEREIDA.get());
+        this.add(ModBlocks.MENA_NEREIDA.get(),
+                block -> createNereidaOreDrops(ModBlocks.MENA_NEREIDA.get(), ModItems.LINGOTE_NEREIDA.get()));
+    }
+
+    // Drops 1-3 lingotes con fortune, bloque entero con silk touch
+    protected LootTable.Builder createNereidaOreDrops(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
