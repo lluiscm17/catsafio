@@ -60,6 +60,7 @@ public class CommandStateManager {
             tag.putBoolean("spiderFever", SpiderFeverCommand.isEnabled());
             tag.putBoolean("enderPearlDamage", EnderPearlDamageCommand.isEnabled());
             tag.putBoolean("explosiveFireworks", ExplosiveFireworksCommand.isEnabled());
+            tag.putBoolean("cremaSolar", CremaSolarCommand.isEnabled());
 
             try (FileOutputStream fos = new FileOutputStream(saveFile)) {
                 net.minecraft.nbt.NbtIo.writeCompressed(tag, fos);
@@ -107,6 +108,7 @@ public class CommandStateManager {
             setState("spiderFever", SpiderFeverCommand.class, "enabled", tag.getBoolean("spiderFever"));
             setState("enderPearlDamage", EnderPearlDamageCommand.class, "enabled", tag.getBoolean("enderPearlDamage"));
             setState("explosiveFireworks", ExplosiveFireworksCommand.class, "enabled", tag.getBoolean("explosiveFireworks"));
+            setState("cremaSolar", CremaSolarCommand.class, "enabled", tag.getBoolean("cremaSolar"));
 
         } catch (Exception e) {
             Catsafio.LOGGER.error("Failed to load command states", e);

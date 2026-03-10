@@ -64,6 +64,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.SANGRE_DE_GORGONA.get());
                         pOutput.accept(ModItems.RECIPE_BOOK.get());
                         pOutput.accept(ModItems.OJO_DE_SAPO.get());
+                        pOutput.accept(ModItems.FRAGMENTO_DE_PLACA_DE_WILDFIRE.get());
+                        pOutput.accept(ModItems.PLACA_DE_WILDFIRE.get());
+                        pOutput.accept(ModItems.ESPADA_INANIMADA.get());
                         pOutput.accept(ModItems.DEDITA_CELESTE.get());
                         pOutput.accept(ModItems.DEDITA_NARANJA.get());
                         pOutput.accept(ModItems.DEDITA_AZUL.get());
@@ -111,6 +114,7 @@ public class ModCreativeModTabs {
 
 
                         pOutput.accept(ModBlocks.HORNO_BIG.get());
+                        pOutput.accept(ModItems.CREMA_SOLAR.get());
                         pOutput.accept(ModItems.HAT.get());
                         pOutput.accept(ModItems.SUIT.get());
                         pOutput.accept(ModItems.PARTY_HAT.get());

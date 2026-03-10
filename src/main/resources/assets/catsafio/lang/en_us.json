@@ -75,6 +75,9 @@
 
   "item.catsafio.lingote_nereida": "Nereida Ingot",
   "block.catsafio.mena_nereida": "Nereida Ore",
-  "block.catsafio.bloque_nereida": "Block of Nereida"
+  "block.catsafio.bloque_nereida": "Block of Nereida",
+
+  "item.catsafio.crema_solar": "Sunscreen",
+  "effect.catsafio.proteccion_solar": "Sun Protection"
 
 }

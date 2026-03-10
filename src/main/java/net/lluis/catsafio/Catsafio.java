@@ -7,6 +7,7 @@ import net.lluis.catsafio.entity.ModEntities;
 import net.lluis.catsafio.entity.client.*;
 import net.lluis.catsafio.item.ModCreativeModTabs;
 import net.lluis.catsafio.item.ModItems;
+import net.lluis.catsafio.effect.ModEffects;
 import net.lluis.catsafio.loot.ModLootModifiers;
 import net.lluis.catsafio.network.*;
 import net.lluis.catsafio.roulette.RouletteConfig;
@@ -59,6 +60,7 @@ public class Catsafio {
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
@@ -141,6 +143,7 @@ public class Catsafio {
         SpiderFeverCommand.register(event.getDispatcher());
         EnderPearlDamageCommand.register(event.getDispatcher());
         ExplosiveFireworksCommand.register(event.getDispatcher());
+        CremaSolarCommand.register(event.getDispatcher());
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

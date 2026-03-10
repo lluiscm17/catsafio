@@ -80,7 +80,13 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SANGRE_DE_GORGONA = ITEMS.register("sangre_de_gorgona",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FRAGMENTO_DE_PLACA_DE_WILDFIRE = ITEMS.register("fragmento_de_placa_de_wildfire",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PLACA_DE_WILDFIRE = ITEMS.register("placa_de_wildfire",
+            () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ESPADA_INANIMADA = ITEMS.register("espada_inanimada",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
 
     public static final RegistryObject<Item> RECIPE_BOOK = ITEMS.register("recipe_book",
@@ -222,6 +228,10 @@ public class ModItems {
     // NEREIDA
     public static final RegistryObject<Item> LINGOTE_NEREIDA = ITEMS.register("lingote_nereida",
             () -> new Item(new Item.Properties()));
+
+    // CREMA SOLAR
+    public static final RegistryObject<Item> CREMA_SOLAR = ITEMS.register("crema_solar",
+            () -> new CremaSolarItem(new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

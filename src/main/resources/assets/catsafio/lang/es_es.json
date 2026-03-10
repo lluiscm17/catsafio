@@ -108,5 +108,8 @@
 
   "item.catsafio.lingote_nereida": "Lingote de Nereida",
   "block.catsafio.mena_nereida": "Mena de Nereida",
-  "block.catsafio.bloque_nereida": "Bloque de Nereida"
+  "block.catsafio.bloque_nereida": "Bloque de Nereida",
+
+  "item.catsafio.crema_solar": "Crema Solar",
+  "effect.catsafio.proteccion_solar": "Protección Solar"
 }

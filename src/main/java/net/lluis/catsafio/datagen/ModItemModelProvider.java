@@ -74,8 +74,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUNA_REMOVER);
         simpleItem(ModItems.SANGRE_DE_GORGONA);
         simpleItem(ModItems.LINGOTE_NEREIDA);
+        simpleItem(ModItems.FRAGMENTO_DE_PLACA_DE_WILDFIRE);
+        simpleItem(ModItems.PLACA_DE_WILDFIRE);
+        simpleItem(ModItems.TAXI_VOLADOR_SPAWN);
+        simpleItem(ModItems.TAXI_DESTRUCTOR);
+        simpleItem(ModItems.CREMA_SOLAR);
+
 
         handheldItem(ModItems.BASTION_SWORD);
+        handheldItem(ModItems.ESPADA_INANIMADA);
         handheldItem(ModItems.HEALING_SWORD);
         handheldItem(ModItems.PHANTOM_SWORD);
 
