@@ -96,6 +96,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.LINGOTE_NEREIDA.get(), 0.7f, 200, "nereida");
         oreBlasting(pWriter, List.of(ModBlocks.MENA_NEREIDA.get()), RecipeCategory.MISC,
                 ModItems.LINGOTE_NEREIDA.get(), 0.7f, 100, "nereida");
+
+        // ESPADA INANIMADA
+        // A A _
+        // A A _
+        // A B A   (A = cooked_iron, B = stick)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ESPADA_INANIMADA.get())
+                .pattern("AA ")
+                .pattern("AA ")
+                .pattern("ABA")
+                .define('A', ModItems.COOKED_IRON.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.COOKED_IRON.get()), has(ModItems.COOKED_IRON.get()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
