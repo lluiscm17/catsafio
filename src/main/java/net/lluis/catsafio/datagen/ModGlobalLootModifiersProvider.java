@@ -38,5 +38,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("bastion_sword_from_ancient_city", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/ancient_city")).build(), LootItemRandomChanceCondition.randomChance(0.3f).build()}, ModItems.BASTION_SWORD.get()));
+
+        add("alma_de_golem_from_iron_golem", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("entities/iron_golem")).build(),
+                LootItemRandomChanceCondition.randomChance(0.20f).build()}, ModItems.ALMA_DE_GOLEM.get()));
     }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "catsafio:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/iron_golem"
+    },
+    {
+      "chance": 0.2,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "catsafio:alma_de_golem"
+}
