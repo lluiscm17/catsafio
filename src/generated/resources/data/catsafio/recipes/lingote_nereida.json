@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "catsafio:bloque_nereida"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "catsafio:lingote_nereida"
+  }
+}

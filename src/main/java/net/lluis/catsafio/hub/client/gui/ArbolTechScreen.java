@@ -30,6 +30,15 @@ public class ArbolTechScreen extends Screen {
             "catsafio:infernit_helmet_from_rayolita_helmet",
             "catsafio:infernit_leggins_from_rayolita_leggins",
             "catsafio:infernit_raw_infernit",
+
+            // Nereida
+            "catsafio:bloque_nereida",
+            "catsafio:lingote_nereida",
+            "catsafio:lingote_nereida_from_smelting_mena_nereida",
+            "catsafio:lingote_nereida_from_blasting_mena_nereida",
+
+            // Espada Inanimada
+            "catsafio:espada_inanimada",
     };
 
     private static final int ICON_SIZE      = 36;
@@ -65,19 +74,28 @@ public class ArbolTechScreen extends Screen {
         g.drawCenteredString(font, "§9§lÁRBOL TECNOLÓGICO", this.width / 2, 20, 0xFFFFFFFF);
 
         hoveredIndex = -1;
+        int visibleIndex = 0;
 
         for (int i = 0; i < RECIPE_IDS.length; i++) {
             String recipeId = RECIPE_IDS[i];
-            boolean unlocked = HubData.get().isRecipeUnlocked(recipeId);
-            int row = i / ICONS_PER_ROW;
-            int col = i % ICONS_PER_ROW;
+            // Las recetas bloqueadas no se muestran en el menú
+            if (!HubData.get().isRecipeUnlocked(recipeId)) continue;
+
+            int row = visibleIndex / ICONS_PER_ROW;
+            int col = visibleIndex % ICONS_PER_ROW;
             int x = guiLeft + col * (ICON_SIZE + SPACING);
             int y = guiTop  + row * (ICON_SIZE + SPACING);
 
             if (mx >= x && mx < x + ICON_SIZE && my >= y && my < y + ICON_SIZE) {
                 hoveredIndex = i;
             }
-            drawRecipeIcon(g, x, y, recipeId, unlocked, hoveredIndex == i);
+            drawRecipeIcon(g, x, y, recipeId, true, hoveredIndex == i);
+            visibleIndex++;
+        }
+
+        if (visibleIndex == 0) {
+            g.drawCenteredString(font, "§7No hay recetas desbloqueadas aún.",
+                    this.width / 2, guiTop + 20, 0xFFAAAAAA);
         }
 
         BackButtonHelper.drawAndCheckHover(g, font, this.width, this.height, mx, my);
@@ -85,9 +103,7 @@ public class ArbolTechScreen extends Screen {
 
         // Tooltip AL FINAL para que quede encima de todo
         if (hoveredIndex >= 0) {
-            String recipeId = RECIPE_IDS[hoveredIndex];
-            boolean unlocked = HubData.get().isRecipeUnlocked(recipeId);
-            renderRecipeTooltip(g, recipeId, unlocked, mx, my);
+            renderRecipeTooltip(g, RECIPE_IDS[hoveredIndex], true, mx, my);
         }
     }
 

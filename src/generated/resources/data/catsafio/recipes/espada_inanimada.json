@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "catsafio:cooked_iron"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    " A ",
+    "ABA"
+  ],
+  "result": {
+    "item": "catsafio:espada_inanimada"
+  },
+  "show_notification": true
+}

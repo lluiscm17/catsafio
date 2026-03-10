@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "catsafio:item/fragmento_de_placa_de_wildfire"
+  }
+}
