@@ -24,21 +24,40 @@ public class RouletteConfig {
         configFile = new File(worldDir, "roulettes.json");
 
         if (!configFile.exists()) {
+            // No config file – create defaults and save them
             createDefaultConfig();
             save();
-        } else {
-            try (FileReader reader = new FileReader(configFile)) {
-                RouletteConfigData data = GSON.fromJson(reader, RouletteConfigData.class);
-                if (data != null && data.roulettes != null) {
-                    configs = data.roulettes;
-                } else {
-                    createDefaultConfig();
-                }
+            Catsafio.LOGGER.info("Created default roulette config at {}", configFile.getAbsolutePath());
+            return;
+        }
+
+        try (FileReader reader = new FileReader(configFile)) {
+            // Parse JSON; may throw JsonSyntaxException if malformed
+            RouletteConfigData data = GSON.fromJson(reader, RouletteConfigData.class);
+            if (data != null && data.roulettes != null) {
+                configs = data.roulettes;
                 Catsafio.LOGGER.info("Loaded roulette configs from {}", configFile.getAbsolutePath());
-            } catch (Exception e) {
-                Catsafio.LOGGER.error("Failed to load roulette configs", e);
+            } else {
+                Catsafio.LOGGER.warn("Roulette config empty or missing 'roulettes' field – regenerating defaults");
                 createDefaultConfig();
+                save();
             }
+        } catch (com.google.gson.JsonSyntaxException e) {
+            // Corrupted JSON – backup and recreate defaults
+            Catsafio.LOGGER.error("Malformed roulette JSON in {} – resetting to defaults", configFile.getAbsolutePath(), e);
+            try {
+                java.nio.file.Files.move(configFile.toPath(),
+                    new java.io.File(configFile.getParentFile(), "roulettes.json.corrupt").toPath(),
+                    java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            } catch (Exception me) {
+                Catsafio.LOGGER.error("Failed to back up corrupted roulette config", me);
+            }
+            createDefaultConfig();
+            save();
+        } catch (Exception e) {
+            Catsafio.LOGGER.error("Failed to load roulette configs", e);
+            createDefaultConfig();
+            save();
         }
     }
 
