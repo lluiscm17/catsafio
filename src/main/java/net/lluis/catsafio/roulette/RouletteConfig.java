@@ -21,7 +21,7 @@ public class RouletteConfig {
 
     public static void load(MinecraftServer server) {
         File worldDir = server.getWorldPath(net.minecraft.world.level.storage.LevelResource.ROOT).toFile();
-        configFile = new File(worldDir, "catsafio_roulettes.json");
+        configFile = new File(worldDir, "roulettes.json");
 
         if (!configFile.exists()) {
             createDefaultConfig();
@@ -88,6 +88,10 @@ public class RouletteConfig {
         configs.put("rosada", new RouletteData(
             "§dRuleta Rosada ha terminado!",
             List.of("say Ruleta rosada completada!")
+        ));
+        configs.put("roja", new RouletteData(
+            "§cRuleta Roja ha terminado!",
+            List.of("say Ruleta roja completada!")
         ));
     }
 
